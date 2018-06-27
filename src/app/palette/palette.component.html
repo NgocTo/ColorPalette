@@ -1,0 +1,13 @@
+<h1 class="text-center my-5">Pick your favorite color palette!</h1>
+<div *ngIf='palettes' class="justify-content-center align-items-center">
+  <div *ngFor='let p of palettes' class="text-center m-5 py-4 bg-wht">
+      <h3>Theme #{{ p.id }}: <span class="font-weight-bold">{{p.paletteName}}</span></h3>
+      <div class="row justify-content-center">
+        <div [ngStyle]="{'backgroundColor': p.color1 }" class="border rounded border-light py-5 col-10 col-md-3 font-weight-bold">{{ p.color1 }}</div>
+        <div class="row col-10 col-md-3 px-0">
+          <span [ngStyle]="{'backgroundColor': p.color2 }" class="border rounded border-light py-5 col-12 font-weight-bold">{{ p.color2 }}</span>
+          <span [ngStyle]="{'backgroundColor': p.color3 }" class="border rounded border-light py-5 col-12 font-weight-bold">{{ p.color3 }}</span>
+        </div>
+      </div>
+    </div>
+</div>
