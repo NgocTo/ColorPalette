@@ -1,9 +1,17 @@
-<h1 class="text-center my-5">Pick your favorite color palette!</h1>
-<div *ngIf='palettes' class="justify-content-center align-items-center">
-  <div *ngFor='let p of palettes' class="text-center m-5 py-4 bg-wht">
-      <h3>Theme #{{ p.id }}: <span class="font-weight-bold">{{p.paletteName}}</span></h3>
-      <div class="row justify-content-center">
-        <div [ngStyle]="{'backgroundColor': p.color1 }" class="border rounded border-light py-5 col-10 col-md-3 font-weight-bold">{{ p.color1 }}</div>
+<nav *ngIf='palettes' class="navbar navbar-light text-center justify-content-center">
+    <h3 class="d-none">Palette list</h3>
+      <ul class="nav" *ngFor='let p of palettes'>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/demonstration/{{ p.id }}">{{ p.paletteName }}</a>
+          </li>
+      </ul>
+</nav>
+
+<div *ngIf='palettes' class="justify-content-center align-items-center container">
+  <div *ngFor='let p of palettes' class="m-5 p-5 bg-wht">
+      <h3 class="font-weight-bold">#{{ p.id }} {{p.paletteName}}</h3>
+      <div class="row justify-content-center py-3 px-0 text-center">
+        <div [ngStyle]="{'backgroundColor': p.color1 }" class="border rounded border-light py-5 col-10 col-md-3 font-weight-bold align-items-end">{{ p.color1 }}</div>
         <div class="row col-10 col-md-3 px-0">
           <span [ngStyle]="{'backgroundColor': p.color2 }" class="border rounded border-light py-5 col-12 font-weight-bold">{{ p.color2 }}</span>
           <span [ngStyle]="{'backgroundColor': p.color3 }" class="border rounded border-light py-5 col-12 font-weight-bold">{{ p.color3 }}</span>
