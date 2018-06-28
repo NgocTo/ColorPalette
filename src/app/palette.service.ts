@@ -17,7 +17,7 @@ export class PaletteService {
   
   getPalettes(palette_id?: number): Observable<Palette[]> {
     if (palette_id) {
-      return this.http.get<Palette[]>(this.apiUrl + `?palette_id=${palette_id}`).pipe( catchError(this.handleError));
+      return this.http.get<Palette[]>(this.apiUrl + `&palette_id=${palette_id}`).pipe( catchError(this.handleError));
     }
     return this.http.get<Palette[]>(this.apiUrl).pipe( catchError(this.handleError));
   }

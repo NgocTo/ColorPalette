@@ -11,7 +11,7 @@ export class PaletteComponent implements OnInit {
 
   palettes: Palette[];
 
-  setOffices(): void {
+  setPalettes(): void {
     this.paletteService.getPalettes().subscribe(data => this.palettes = data);
   }
   constructor(
@@ -19,7 +19,7 @@ export class PaletteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.setOffices();
+    this.setPalettes();
   }
 
 }
