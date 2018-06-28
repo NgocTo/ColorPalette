@@ -1,0 +1,12 @@
+
+<div *ngIf="palette" class="container p-5 bg-dark rounded">
+  <div *ngFor='let p of palette'>
+    <h3 [ngStyle]="{'color': p.color3 }">Color Theme #{{p.id}} </h3>
+    <div class="row">
+      <p [ngStyle]="{'color': p.color1 }" class="col-md-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum amet, necessitatibus, dolore quam iusto corporis repellat perspiciatis consectetur voluptatum aspernatur, dignissimos omnis natus inventore dicta. Veniam tempore exercitationem adipisci voluptatibus suscipit neque reiciendis magni aliquam aliquid architecto beatae minima ea repellat accusantium esse vitae, in consequuntur temporibus quo voluptatum quidem. </p>
+      <div [ngStyle]="{'backgroundColor': p.color2, 'border-style': 'solid', 'border-width': '2px', 'border-color': p.color3, 'height': '8em', 'width': '100%' }" class="col-md-4"></div>
+    </div>
+    <p [ngStyle]="{'color': p.color3 }" class="text-center pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, fuga! </p>
+    <p [ngStyle]="{'color': p.color1 }">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor doloremque unde. Quis corporis odit sed. Saepe beatae labore, facere, nam molestiae ex quo cum harum voluptas quaerat perspiciatis dolores perferendis? Molestiae dicta veniam eum totam velit aspernatur eos qui, quia nemo quis, temporibus quam. Error, animi! Facilis eligendi deleniti, aut vel placeat non vitae libero, saepe explicabo laborum, voluptates consequuntur repellat? Magni reprehenderit mollitia vero, libero molestias ratione officiis voluptas quos dolor quae nam aliquid sint quam rem! Assumenda eius officiis illo! Omnis neque porro corrupti quis est! Vel corrupti accusamus exercitationem non aliquid nemo, veritatis mollitia velit sed.</p>
+  </div>
+</div>

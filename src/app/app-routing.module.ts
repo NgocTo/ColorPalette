@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PaletteComponent } from './palette/palette.component';
+import { DemonstrationComponent } from './demonstration/demonstration.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'palettes', component: PaletteComponent },
+  { path: 'demonstration/:id', component: DemonstrationComponent },
 ]
 
 @NgModule({

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PaletteComponent } from './palette/palette.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { DemonstrationComponent } from './demonstration/demonstration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaletteComponent,
-    HomeComponent
+    HomeComponent,
+    DemonstrationComponent
   ],
   imports: [
     BrowserModule,
