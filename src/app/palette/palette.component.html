@@ -1,4 +1,15 @@
-<nav *ngIf='palettes' class="navbar navbar-light text-center justify-content-center">
+
+<form class="container text-center">
+  <div class="row form-group mx-5">
+    <label for="palette-id" class="col-md-3 col-form-label text-md-right font-weight-bold">Search Palette: </label>
+    <div class="col-md-8">
+    <input type="text" class="form-control text-md-left" id="palette-id" name="palette-id" placeholder="Enter the palette id..." [(ngModel)]="paletteSearch.id" />
+    </div>
+  </div>
+  <button (click)="findPalette(paletteSearch)" class="palette-btn">Search</button>
+</form>
+
+<nav *ngIf='palettes' class="navbar navbar-light text-center justify-content-center palette-nav">
     <h3 class="d-none">Palette list</h3>
       <ul class="nav" *ngFor='let p of palettes'>
           <li class="nav-item">
@@ -8,7 +19,7 @@
 </nav>
 
 <div *ngIf='palettes' class="justify-content-center align-items-center container">
-  <div *ngFor='let p of palettes' class="m-5 p-5 bg-wht">
+  <div *ngFor='let p of palettes' class="mx-5 p-5 bg-wht">
       <h3 class="font-weight-bold">#{{ p.id }} {{p.paletteName}}</h3>
       <div class="row justify-content-center py-3 px-0 text-center">
         <div [ngStyle]="{'backgroundColor': p.color1 }" class="border rounded border-light py-5 col-10 col-md-3 font-weight-bold align-items-end">{{ p.color1 }}</div>

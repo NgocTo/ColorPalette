@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PaletteComponent } from './palette/palette.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -17,6 +17,8 @@ import { DemonstrationComponent } from './demonstration/demonstration.component'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule ,
     HttpClientModule,
     AppRoutingModule
   ],
