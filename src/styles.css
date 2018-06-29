@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+:focus {
+    color:#B4CCE3;
+}
 body{
     background-image: url("./assets/background.jpg");
     background-repeat: no-repeat;
@@ -6,10 +9,31 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+.title {
+    color: #214149;
+}
 .bg-wht {
     background-color:  rgba(255, 255, 255, 0.5);
     transition: all 0.5s;
 }
 .bg-wht:hover, .bg-wht:focus {
     background-color: rgba(255, 255, 255, 0.8);
+}
+.palette-btn {
+    background-color:#454545;
+    color: white;
+    padding: 0.5em 1.5em;
+    border-style: none;
+    border-radius: 5%;
+    transition: all 0.3s;
+}
+.palette-btn:hover, .palette-btn:focus {
+    background-color: #214149;
+}
+.palette-nav a {
+    color: #214149;
+    transition: all 0.1s;
+}
+.palette-nav a:hover, .palette-nav a:focus {
+    font-weight: bold;
 }
